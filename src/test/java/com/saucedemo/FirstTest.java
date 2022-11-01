@@ -19,6 +19,11 @@ public class FirstTest {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.get("https://www.saucedemo.com/");
+        
+        String expectedTitle = "Swag Labs";
+        String actualTitle = driver.getTitle();
+
+        Assert.assertEquals(actualTitle,expectedTitle);
 
     }
 
